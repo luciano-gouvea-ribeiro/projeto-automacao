@@ -1,0 +1,48 @@
+# Automação de Preenchimento de Formulário com Selenium e CSV
+
+Este projeto utiliza o Selenium para automatizar o preenchimento de um formulário em um site. As informações inseridas são extraídas de um arquivo CSV, e o script faz login no site antes de começar a preencher os dados. A automação usa o navegador Chrome, gerenciado pelo `webdriver_manager`.
+
+## Requisitos
+
+Antes de executar o script, certifique-se de ter instalado os seguintes itens:
+
+### Python
+Certifique-se de ter o Python instalado na sua máquina. Você pode baixar e instalar o Python [aqui](https://www.python.org/).
+
+### Bibliotecas Python
+Você precisará instalar as bibliotecas listadas abaixo:
+
+- **selenium**: Para controlar o navegador e interagir com os elementos da página.
+- **webdriver_manager**: Para gerenciar automaticamente o driver do navegador Chrome.
+
+Execute os seguintes comandos para instalar as bibliotecas:
+
+```bash
+pip install selenium
+pip install webdriver-manager
+```
+
+### Passo a Passo de como utilizar esse Script
+
+- Depois de fazer todas as configurações anteriores:
+
+- Você pode utilizar outro site ou formulario para fazer a sua automação, trocando apena o valor em as **chaves()**
+
+```
+navegador.get("AQUI")
+
+```
+
+## Ponto de Atenção:
+
+se o seu site ou formulario csv conter mais linhas ou campos para preencher, apenas coloque dentro do for do código mais uma linha para ele preencher.
+
+- ATENÇAO NO QUE DEVE MUDAR:
+- XPATH - É o caminho do item no site, na internet mostra como achar esse caminho em cada elemento do site.
+- em send_keys(linha[6]) e assim sucetivamente para preencher mais linhas
+
+
+```pytho
+canpo_custo = navegador.find_element('xpath', '//*[@id="custo"]' ).send_keys(linha[5])
+
+```
